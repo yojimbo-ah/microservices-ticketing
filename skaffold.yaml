@@ -8,7 +8,7 @@ build:
   local:
     push: false
   artifacts:
-    - image: ahmed0ahmed/orders
+    - image: your-dockerhub-username/orders
       context: orders
       docker:
         dockerfile: Dockerfile
@@ -16,7 +16,7 @@ build:
         manual:
           - src: 'src/**/*.ts'
             dest : .
-    - image: ahmed0ahmed/auth
+    - image: your-dockerhub-username/auth
       context: auth
       docker:
         dockerfile: Dockerfile
@@ -24,7 +24,7 @@ build:
         manual:
           - src: 'src/**/*.ts'
             dest: .
-    - image : ahmed0ahmed/client
+    - image : your-dockerhub-username/client
       context: client
       docker: 
         dockerfile : Dockerfile
@@ -34,7 +34,7 @@ build:
             dest: .
           - src: '**/*.js'
             dest: .
-    - image : ahmed0ahmed/tickets
+    - image : your-dockerhub-username/tickets
       context : tickets
       docker:
         dockerfile: Dockerfile
@@ -42,7 +42,7 @@ build:
         manual:
           - src: '**/*.ts'
             dest : .
-    - image : ahmed0ahmed/expiration
+    - image : your-dockerhub-username/expiration
       context : expiration
       docker:
         dockerfile: Dockerfile
@@ -50,7 +50,7 @@ build:
         manual:
           - src: '**/*.ts'
             dest : .
-    - image : ahmed0ahmed/payments
+    - image : your-dockerhub-username/payments
       context : payments
       docker:
         dockerfile: Dockerfile
